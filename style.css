@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root { /*pseudo-classe para deixar configurações padrões e facilitar na hora de configurar fontes e cores*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", serif;
+    --fonte-android: 'Android', cursive; 
+}
+
+body {
+    background-color: #83e1ad;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height: 120px; /*propriedade para deixar a altura minima*/
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: lighter;
+    text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.414);
+}
+
+header > p {
+    color: white;
+    font-size: 1em;
+    font-family: var(--fonte-padrao);
+    max-width: 500px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+
+nav {
+    background-color: var(--cor5);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.381);
+}
+
+nav > a {
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: var(--cor2);
+    border-radius: 7px;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+nav > a:hover {
+    background-color: var(--cor4);
+    padding: 7px;
+    transition-duration: .5s;
+}
+
+img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px; /*Usado para deixar a imagem com a medida mais apropriada para certos dispositivos*/
+    display: block;  /*display: block para transformar a imagem em um elemento de bloco para centralizar ela no site*/
+    margin: auto; /*usado para centralizar a imagem no site*/
+}
+
+main {
+    background-color: white;
+    min-width: 300px; /*medida para deixar a main centralizada na tela*/
+    max-width: 1000px; /*medida para deixar a main centralizada na tela*/
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.559);
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    font-weight: lighter;
+    color: var(--cor5);
+    font-size: 1.8em;
+    padding-top: 15px;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    text-indent: 7px;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+}
+
+main p {
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    margin: 15px 0px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 1.6em;
+}
+
+main a {
+    text-decoration: none;
+    background-color: #83e1ad;
+    color: #1a5c37;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+a.destaque::after {
+    content: '\1F517';
+}
+
+div.video {
+    background-color: var(--cor1);
+    margin: 0px -20px 30px -20px; /*margin para separar o conteúdo de forma igualitária (os px negativos são usados para deixar o elemento colado a borda ou contéudo*/
+    padding: 20px; /*usado para espaçar o iframe (video) com o background-color*/
+    padding-bottom: 56.6%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    padding: 10px;
+    background-color: var(--cor1);
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    font-family: var(--fonte-padrao);
+    margin: -10px -10px -0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 8px;
+}
+
+ul {
+    list-style-position: inside;
+    columns: 2;
+    list-style-type:'\00A0\1F5F8\00A0';
+}
+
+footer {
+    background-color: var(--cor4);
+    color: white;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    font-size: 1.1em;
+    padding: 2px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: white;
+}
+
+footer > a:hover {
+    background-color: var(--cor2);
+    color: var(--cor5);
+    border-radius: 4px;
+    padding: 1px;
+    transition-duration: 0.9s;
+}
